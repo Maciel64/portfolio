@@ -1,100 +1,198 @@
+"use client";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Github, Mail, Linkedin } from "lucide-react";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+import "./globals.css";
+
+export default function Portfolio() {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen bg-gradient-to-b from-background to-secondary">
+      <header className="fixed top-0 w-full z-50 backdrop-blur-sm border-b">
+        <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-xl font-bold"
+          >
+            Maciel64
+          </motion.span>
+          <div className="flex gap-4">
+            <Button variant="ghost" asChild>
+              <Link href="#about">About</Link>
+            </Button>
+            <Button variant="ghost" asChild>
+              <Link href="#skills">Skills</Link>
+            </Button>
+            <Button variant="ghost" asChild>
+              <Link href="#projects">Projects</Link>
+            </Button>
+            <Button variant="ghost" asChild>
+              <Link href="#contact">Contact</Link>
+            </Button>
+          </div>
+        </nav>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      <main className="container mx-auto px-4 pt-24">
+        {/* Hero Section */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="min-h-[80vh] flex flex-col items-center justify-center text-center gap-8"
+        >
+          <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-primary">
             <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="https://github.com/Maciel64.png"
+              alt="Profile Picture"
+              fill
+              className="object-cover"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+          </div>
+          <div className="space-y-4">
+            <h1 className="text-4xl font-bold">Maciel64</h1>
+            <p className="text-xl text-muted-foreground max-w-2xl">
+              Full Stack Developer passionate about creating beautiful and
+              functional web applications
+            </p>
+          </div>
+          <div className="flex gap-4">
+            <Button asChild>
+              <Link href="https://github.com/Maciel64" target="_blank">
+                <Github className="w-4 h-4 mr-2" />
+                GitHub
+              </Link>
+            </Button>
+            <Button variant="secondary" asChild>
+              <Link href="#contact">
+                <Mail className="w-4 h-4 mr-2" />
+                Contact Me
+              </Link>
+            </Button>
+          </div>
+        </motion.section>
+
+        {/* Skills Section */}
+        <motion.section
+          id="skills"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="py-20"
+        >
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Skills & Technologies
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              "JavaScript",
+              "TypeScript",
+              "React",
+              "Next.js",
+              "Node.js",
+              "Python",
+              "Git",
+              "SQL",
+            ].map((skill) => (
+              <motion.div key={skill} variants={item}>
+                <Card className="hover:border-primary transition-colors">
+                  <CardContent className="p-6 text-center">{skill}</CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* Projects Section */}
+        <motion.section
+          id="projects"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="py-20"
+        >
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Featured Projects
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[1, 2, 3].map((project) => (
+              <motion.div key={project} variants={item}>
+                <Card className="overflow-hidden hover:border-primary transition-colors">
+                  <CardContent className="p-0">
+                    <div className="aspect-video bg-muted" />
+                    <div className="p-6">
+                      <h3 className="font-bold mb-2">Project {project}</h3>
+                      <p className="text-muted-foreground mb-4">
+                        A brief description of the project and the technologies
+                        used.
+                      </p>
+                      <Button variant="secondary" className="w-full">
+                        View Project
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* Contact Section */}
+        <motion.section
+          id="contact"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="py-20"
+        >
+          <h2 className="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+          <div className="max-w-md mx-auto flex flex-col gap-4">
+            <Button size="lg" asChild>
+              <Link href="mailto:your.email@example.com">
+                <Mail className="w-4 h-4 mr-2" />
+                Email Me
+              </Link>
+            </Button>
+            <Button size="lg" variant="secondary" asChild>
+              <Link href="https://linkedin.com" target="_blank">
+                <Linkedin className="w-4 h-4 mr-2" />
+                Connect on LinkedIn
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <Link href="https://github.com/Maciel64" target="_blank">
+                <Github className="w-4 h-4 mr-2" />
+                Follow on GitHub
+              </Link>
+            </Button>
+          </div>
+        </motion.section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="border-t">
+        <div className="container mx-auto px-4 py-8 text-center text-muted-foreground">
+          <p>© {new Date().getFullYear()} Maciel64. All rights reserved.</p>
+        </div>
       </footer>
     </div>
   );
