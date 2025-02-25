@@ -1,16 +1,19 @@
 "use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Github, Mail, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-
-import "./globals.css";
+import { useTranslations } from "next-intl";
 
 export default function Portfolio() {
+  const t = useTranslations();
+
   const container = {
     hidden: { opacity: 0 },
+
     show: {
       opacity: 1,
       transition: {
@@ -37,23 +40,22 @@ export default function Portfolio() {
           </motion.span>
           <div className="flex gap-4">
             <Button variant="ghost" asChild>
-              <Link href="#about">About</Link>
+              <Link href="#about">{t("About")}</Link>
             </Button>
             <Button variant="ghost" asChild>
-              <Link href="#skills">Skills</Link>
+              <Link href="#skills">{t("Skills")}</Link>
             </Button>
             <Button variant="ghost" asChild>
-              <Link href="#projects">Projects</Link>
+              <Link href="#projects">{t("Projects")}</Link>
             </Button>
             <Button variant="ghost" asChild>
-              <Link href="#contact">Contact</Link>
+              <Link href="#contact">{t("Contact")}</Link>
             </Button>
           </div>
         </nav>
       </header>
 
       <main className="container mx-auto px-4 pt-24">
-        {/* Hero Section */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -70,8 +72,9 @@ export default function Portfolio() {
           <div className="space-y-4">
             <h1 className="text-4xl font-bold">Maciel64</h1>
             <p className="text-xl text-muted-foreground max-w-2xl">
-              Full Stack Developer passionate about creating beautiful and
-              functional web applications
+              {t(
+                "Full Stack Developer passionate about creating beautiful and functional web applications"
+              )}
             </p>
           </div>
           <div className="flex gap-4">
@@ -84,13 +87,12 @@ export default function Portfolio() {
             <Button variant="secondary" asChild>
               <Link href="#contact">
                 <Mail className="w-4 h-4 mr-2" />
-                Contact Me
+                {t("Contact Me")}
               </Link>
             </Button>
           </div>
         </motion.section>
 
-        {/* Skills Section */}
         <motion.section
           id="skills"
           variants={container}
@@ -100,7 +102,7 @@ export default function Portfolio() {
           className="py-20"
         >
           <h2 className="text-3xl font-bold text-center mb-12">
-            Skills & Technologies
+            {t("Skills & Technologies")}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
@@ -122,7 +124,6 @@ export default function Portfolio() {
           </div>
         </motion.section>
 
-        {/* Projects Section */}
         <motion.section
           id="projects"
           variants={container}
@@ -132,7 +133,7 @@ export default function Portfolio() {
           className="py-20"
         >
           <h2 className="text-3xl font-bold text-center mb-12">
-            Featured Projects
+            {t("Featured Projects")}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[1, 2, 3].map((project) => (
@@ -157,7 +158,6 @@ export default function Portfolio() {
           </div>
         </motion.section>
 
-        {/* Contact Section */}
         <motion.section
           id="contact"
           initial={{ opacity: 0 }}
@@ -165,24 +165,29 @@ export default function Portfolio() {
           viewport={{ once: true }}
           className="py-20"
         >
-          <h2 className="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            {t("Get In Touch")}
+          </h2>
           <div className="max-w-md mx-auto flex flex-col gap-4">
             <Button size="lg" asChild>
               <Link href="mailto:your.email@example.com">
                 <Mail className="w-4 h-4 mr-2" />
-                Email Me
+                {t("Email Me")}
               </Link>
             </Button>
             <Button size="lg" variant="secondary" asChild>
-              <Link href="https://linkedin.com" target="_blank">
+              <Link
+                href="https://www.linkedin.com/in/maciel-suassuna/"
+                target="_blank"
+              >
                 <Linkedin className="w-4 h-4 mr-2" />
-                Connect on LinkedIn
+                {t("Connect on LinkedIn")}
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
               <Link href="https://github.com/Maciel64" target="_blank">
                 <Github className="w-4 h-4 mr-2" />
-                Follow on GitHub
+                {t("Follow on GitHub")}
               </Link>
             </Button>
           </div>
@@ -191,7 +196,9 @@ export default function Portfolio() {
 
       <footer className="border-t">
         <div className="container mx-auto px-4 py-8 text-center text-muted-foreground">
-          <p>© {new Date().getFullYear()} Maciel64. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} Maciel64. {t("All rights reserved")}.
+          </p>
         </div>
       </footer>
     </div>
