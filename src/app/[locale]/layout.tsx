@@ -1,9 +1,8 @@
-import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../globals.css";
 
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
@@ -18,13 +17,25 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata: Metadata = {
-  title: "Maciel Suassuna | Typescript Fullstack Developer",
-  description: "Maciel Gomes Suassuna Júnior Portifolio",
-};
-
 import { Analytics } from "@vercel/analytics/react";
 import { Locales } from "@/i18n/request";
+
+interface IGenerateMetadataProps {
+  params: {
+    locale: string;
+  };
+}
+
+export async function generateMetadata({
+  params: { locale },
+}: IGenerateMetadataProps) {
+  const t = await getTranslations({ locale });
+
+  return {
+    title: t("Maciel Gomes Suassuna Júnior Portfolio"),
+    description: t("Maciel Gomes Suassuna Júnior Portfolio"),
+  };
+}
 
 export default async function RootLayout({
   children,
