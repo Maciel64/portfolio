@@ -34,6 +34,36 @@ export async function generateMetadata({
   return {
     title: t("Maciel Gomes Suassuna Júnior Portfolio"),
     description: t("Maciel Gomes Suassuna Júnior Portfolio"),
+    alternates: {
+      canonical: "https://www.seusite.com",
+      languages: {
+        en: "/en",
+        pt: "/pt",
+        es: "/es",
+      },
+    },
+    // openGraph: {
+    //   title: t("Maciel Gomes Suassuna Júnior Portfolio"),
+    //   description: t("Maciel Gomes Suassuna Júnior Portfolio"),
+    //   // url: "https://www.seusite.com",
+    //   siteName: "Maciel Gomes Suassuna Júnior Portfolio",
+    //   locale: locale,
+    //   type: "website",
+    //   images: [
+    //     {
+    //       url: "https://www.seusite.com/imagem-og.jpg",
+    //       width: 1200,
+    //       height: 630,
+    //       alt: t("Imagem de destaque"),
+    //     },
+    //   ],
+    // },
+    // twitter: {
+    //   card: "summary_large_image",
+    //   title: t("Maciel Gomes Suassuna Júnior Portfolio"),
+    //   description: t("Maciel Gomes Suassuna Júnior Portfolio"),
+    //   images: ["https://www.seusite.com/imagem-twitter.jpg"],
+    // },
   };
 }
 
