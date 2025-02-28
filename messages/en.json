@@ -3,6 +3,7 @@
   "About": "About",
   "Skills": "Skills",
   "Projects": "Projects",
+  "Project": "Project",
   "Contact": "Contact",
   "Contact Me": "Contact Me",
   "Skills & Technologies": "Skills & Technologies",
@@ -12,6 +13,8 @@
   "Connect on LinkedIn": "Connect on LinkedIn",
   "Follow on GitHub": "Follow on GitHub",
   "All rights reserved": "All rights reserved",
+  "View Project": "View Project",
+  "Client Project": "Client Projec",
   "Maciel Suassuna | Typescript Fullstack Developer": "Maciel Suassuna | Typescript Fullstack Developer",
   "Maciel Gomes Suassuna Júnior Portfolio": "Maciel Gomes Suassuna Júnior Portfolio"
 }

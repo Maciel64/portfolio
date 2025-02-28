@@ -2,8 +2,10 @@ import { ReactElement } from "react";
 
 export interface IProjectSchema {
   title: string;
+  description: string;
   technologies: (typeof technologies)[number]["name"][];
   images: string[];
+  type: "personal" | "client";
 }
 
 export interface ITecnologySchema {
@@ -41,7 +43,16 @@ export const technologies: ITecnologySchema[] = [
 export const projects: IProjectSchema[] = [
   {
     title: "Meetlink",
+    description: "",
     technologies: ["Python", "Docker", "Bootstrap", "Javascript", "PostgreSQL"],
-    images: [],
+    images: [
+      "/img/projects/meetlink/001.png",
+      "/img/projects/meetlink/002.png",
+      "/img/projects/meetlink/003.png",
+      "/img/projects/meetlink/004.png",
+      "/img/projects/meetlink/005.png",
+      "/img/projects/meetlink/006.png",
+    ],
+    type: "client",
   },
 ];

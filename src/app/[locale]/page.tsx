@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Github, Mail, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -9,6 +8,9 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 import TechnologyBadges from "@/components/sections/technologies-badges";
+import { projects } from "@/helpers/projects";
+
+import { ProjectCard } from "@/components/project-card";
 
 export default function Portfolio() {
   const t = useTranslations();
@@ -22,11 +24,6 @@ export default function Portfolio() {
         staggerChildren: 0.2,
       },
     },
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
   };
 
   return (
@@ -110,24 +107,8 @@ export default function Portfolio() {
           <TechnologyBadges />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3].map((project) => (
-              <motion.div key={project} variants={item}>
-                <Card className="overflow-hidden hover:border-primary transition-colors">
-                  <CardContent className="p-0">
-                    <div className="aspect-video bg-muted" />
-                    <div className="p-6">
-                      <h3 className="font-bold mb-2">Project {project}</h3>
-                      <p className="text-muted-foreground mb-4">
-                        A brief description of the project and the technologies
-                        used.
-                      </p>
-                      <Button variant="secondary" className="w-full">
-                        View Project
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+            {projects.map((project) => (
+              <ProjectCard project={project} key={project.title} />
             ))}
           </div>
         </motion.section>
