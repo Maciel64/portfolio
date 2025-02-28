@@ -20,7 +20,7 @@ interface ProjectCardProps {
   project: {
     title: string;
     description: string;
-    type: "personal" | "client";
+    type: "personal" | "client" | "academic";
     images: string[];
   };
 }

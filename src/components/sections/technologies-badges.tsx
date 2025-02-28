@@ -18,6 +18,10 @@ export default function TechnologyBadges() {
       Javascript: "from-yellow-500 to-amber-300",
       Typescript: "from-blue-700 to-blue-400",
       PostgreSQL: "from-blue-800 to-cyan-600",
+      MongoDB: "from-green-600 to-green-400",
+      "C#": "from-purple-600 to-indigo-500",
+      ".NET": "from-violet-600 to-blue-500",
+      TailwindCSS: "from-cyan-500 to-blue-400",
     };
 
     return (

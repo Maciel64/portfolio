@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 import { Badge } from "./ui/badge";
-import { Briefcase, Code2 } from "lucide-react";
+import { Briefcase, Code2, GraduationCap } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 interface ProjectBadgeProps {
-  type: "personal" | "client";
+  type: "personal" | "client" | "academic";
 }
 
 export function ProjectBadge({ type }: ProjectBadgeProps) {
@@ -55,34 +55,25 @@ export function ProjectBadge({ type }: ProjectBadgeProps) {
     },
   };
 
-  if (type === "personal") {
-    return (
-      <motion.div
-        className="relative"
-        initial="initial"
-        whileHover="hover"
-        animate="initial"
-      >
-        <motion.div variants={variants}>
-          <Badge
-            className="bg-gradient-to-r from-violet-600 to-indigo-600 
-              text-white border-none px-3 py-1.5 text-sm font-medium
-              flex items-center gap-1.5 cursor-default w-fit rounded-full"
-          >
-            <motion.div variants={iconVariants}>
-              <Code2 className="w-4 h-4" />
-            </motion.div>
-            {t("Client Project")}
-          </Badge>
-        </motion.div>
-        <motion.div
-          variants={glowVariants}
-          className="absolute inset-0 bg-gradient-to-r from-violet-600 to-indigo-600 
-            blur-xl -z-10 rounded-full"
-        />
-      </motion.div>
-    );
-  }
+  const badges = {
+    personal: {
+      gradient: "from-violet-600 to-indigo-600",
+      icon: <Code2 className="w-4 h-4" />,
+      text: t("Personal Project"),
+    },
+    client: {
+      gradient: "from-emerald-600 to-teal-600",
+      icon: <Briefcase className="w-4 h-4" />,
+      text: t("Client Project"),
+    },
+    academic: {
+      gradient: "from-amber-500 to-orange-600",
+      icon: <GraduationCap className="w-4 h-4" />,
+      text: t("Academic Project"),
+    },
+  };
+
+  const { gradient, icon, text } = badges[type];
 
   return (
     <motion.div
@@ -93,20 +84,18 @@ export function ProjectBadge({ type }: ProjectBadgeProps) {
     >
       <motion.div variants={variants}>
         <Badge
-          className="bg-gradient-to-r from-emerald-600 to-teal-600 
+          className={`bg-gradient-to-r ${gradient} 
             text-white border-none px-3 py-1.5 text-sm font-medium
-            flex items-center gap-1.5 cursor-default w-fit rounded-full"
+            flex items-center gap-1.5 cursor-default shadow-sm rounded-full w-fit`}
         >
-          <motion.div variants={iconVariants}>
-            <Briefcase className="w-4 h-4" />
-          </motion.div>
-          {t("Client Project")}
+          <motion.div variants={iconVariants}>{icon}</motion.div>
+          {text}
         </Badge>
       </motion.div>
       <motion.div
         variants={glowVariants}
-        className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-600 
-          blur-xl -z-10 rounded-full"
+        className={`absolute inset-0 bg-gradient-to-r ${gradient} 
+          blur-xl -z-10 rounded-full`}
       />
     </motion.div>
   );

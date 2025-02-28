@@ -5,7 +5,7 @@ export interface IProjectSchema {
   description: string;
   technologies: (typeof technologies)[number]["name"][];
   images: string[];
-  type: "personal" | "client";
+  type: "personal" | "client" | "academic";
 }
 
 export interface ITecnologySchema {
@@ -38,6 +38,22 @@ export const technologies: ITecnologySchema[] = [
     name: "PostgreSQL",
     icon: "https://skillicons.dev/icons?i=postgresql",
   },
+  {
+    name: "MongoDB",
+    icon: "https://skillicons.dev/icons?i=mongo",
+  },
+  {
+    name: "C#",
+    icon: "https://skillicons.dev/icons?i=cs",
+  },
+  {
+    name: ".NET",
+    icon: "https://skillicons.dev/icons?i=dotnet",
+  },
+  {
+    name: "TailwindCSS",
+    icon: "https://skillicons.dev/icons?i=tailwind",
+  },
 ];
 
 export const projects: IProjectSchema[] = [
@@ -54,5 +70,19 @@ export const projects: IProjectSchema[] = [
       "/img/projects/meetlink/006.png",
     ],
     type: "client",
+  },
+  {
+    title: "CisReg UNP",
+    description: "",
+    technologies: [
+      "C#",
+      "Docker",
+      ".NET",
+      "TailwindCSS",
+      "Javascript",
+      "MongoDB",
+    ],
+    images: [],
+    type: "academic",
   },
 ];
