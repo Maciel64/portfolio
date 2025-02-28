@@ -8,6 +8,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
+import TechnologyBadges from "@/components/sections/technologies-badges";
+
 export default function Portfolio() {
   const t = useTranslations();
 
@@ -94,37 +96,6 @@ export default function Portfolio() {
         </motion.section>
 
         <motion.section
-          id="skills"
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="py-20"
-        >
-          <h2 className="text-3xl font-bold text-center mb-12">
-            {t("Skills & Technologies")}
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[
-              "JavaScript",
-              "TypeScript",
-              "React",
-              "Next.js",
-              "Node.js",
-              "Python",
-              "Git",
-              "SQL",
-            ].map((skill) => (
-              <motion.div key={skill} variants={item}>
-                <Card className="hover:border-primary transition-colors">
-                  <CardContent className="p-6 text-center">{skill}</CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
-
-        <motion.section
           id="projects"
           variants={container}
           initial="hidden"
@@ -135,6 +106,9 @@ export default function Portfolio() {
           <h2 className="text-3xl font-bold text-center mb-12">
             {t("Featured Projects")}
           </h2>
+
+          <TechnologyBadges />
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[1, 2, 3].map((project) => (
               <motion.div key={project} variants={item}>

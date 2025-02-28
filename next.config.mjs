@@ -12,6 +12,12 @@ const nextConfig = {
         port: "",
         protocol: "https",
       },
+      {
+        hostname: "skillicons.dev",
+        pathname: "/**",
+        port: "",
+        protocol: "https",
+      },
     ],
   },
 };
