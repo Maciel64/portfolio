@@ -125,7 +125,7 @@ export default function Portfolio() {
           </h2>
           <div className="max-w-md mx-auto flex flex-col gap-4">
             <Button size="lg" asChild>
-              <Link href="mailto:your.email@example.com">
+              <Link href="mailto:macielsuassuna14@gmail.com">
                 <Mail className="w-4 h-4 mr-2" />
                 {t("Email Me")}
               </Link>
