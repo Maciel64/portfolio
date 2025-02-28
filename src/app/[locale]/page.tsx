@@ -42,9 +42,6 @@ export default function Portfolio() {
               <Link href="#about">{t("About")}</Link>
             </Button>
             <Button variant="ghost" asChild>
-              <Link href="#skills">{t("Skills")}</Link>
-            </Button>
-            <Button variant="ghost" asChild>
               <Link href="#projects">{t("Projects")}</Link>
             </Button>
             <Button variant="ghost" asChild>
