@@ -6,6 +6,7 @@ export interface IProjectSchema {
   technologies: (typeof technologies)[number]["name"][];
   images: string[];
   type: "personal" | "client" | "academic";
+  link?: string;
 }
 
 export interface ITecnologySchema {
@@ -82,7 +83,8 @@ export const projects: IProjectSchema[] = [
       "Javascript",
       "MongoDB",
     ],
-    images: [],
+    images: ["/img/projects/cisreg_unp/001.png"],
     type: "academic",
+    link: "https://github.com/Samue1Fontes/CisReg_UNP",
   },
 ];
