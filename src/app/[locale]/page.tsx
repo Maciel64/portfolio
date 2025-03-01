@@ -7,11 +7,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-import TechnologyBadges from "@/components/sections/technologies-badges";
 import { projects } from "@/helpers/projects";
 
 import { ProjectCard } from "@/components/project-card";
 import ExperienceSection from "@/components/sections/experiences-section";
+import TechnologyBadge from "@/components/tecnology-badge";
+import { Technologies, technologies } from "@/helpers/tecnologies";
 
 export default function Portfolio() {
   const t = useTranslations();
@@ -105,7 +106,11 @@ export default function Portfolio() {
             {t("Featured Projects")}
           </h2>
 
-          <TechnologyBadges />
+          <div className="flex gap-4 flex-wrap my-10">
+            {Object.keys(technologies).map((tech) => (
+              <TechnologyBadge tech={tech as Technologies} key={tech} />
+            ))}
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project) => (

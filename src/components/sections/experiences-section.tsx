@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Calendar, Building2, Briefcase, Globe, Linkedin } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { useExperiences } from "@/hooks/use-experiences";
 import {
   Tooltip,
@@ -13,6 +12,8 @@ import {
 } from "../ui/tooltip";
 import Link from "next/link";
 import { useDate } from "@/hooks/use-date";
+import TechnologyBadge from "../tecnology-badge";
+import { Technologies } from "@/helpers/tecnologies";
 
 export default function ExperienceSection() {
   const t = useTranslations();
@@ -89,9 +90,11 @@ export default function ExperienceSection() {
             <div className="w-full flex justify-between">
               <div className="flex flex-wrap gap-2">
                 {exp.skills.map((skill) => (
-                  <Badge key={skill} variant="secondary">
-                    {skill}
-                  </Badge>
+                  <TechnologyBadge
+                    tech={skill as Technologies}
+                    key={skill}
+                    size="micro"
+                  />
                 ))}
               </div>
 
