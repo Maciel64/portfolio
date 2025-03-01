@@ -1,4 +1,4 @@
-import { Technologies } from "./tecnologies";
+import { Technologies } from "./technologies";
 
 export interface IProjectSchema {
   title: string;

@@ -12,8 +12,8 @@ import {
 } from "../ui/tooltip";
 import Link from "next/link";
 import { useDate } from "@/hooks/use-date";
-import TechnologyBadge from "../tecnology-badge";
-import { Technologies } from "@/helpers/tecnologies";
+import TechnologyBadge from "../technology-badge";
+import { Technologies } from "@/helpers/technologies";
 
 export default function ExperienceSection() {
   const t = useTranslations();
@@ -98,7 +98,7 @@ export default function ExperienceSection() {
                 ))}
               </div>
 
-              <div className="flex flex-col md:flex-row gap-1">
+              <div className="flex flex-col md:flex-row gap-1 h-fit">
                 <Link
                   href={exp.site}
                   target="_blank"

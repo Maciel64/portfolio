@@ -11,8 +11,8 @@ import { projects } from "@/helpers/projects";
 
 import { ProjectCard } from "@/components/project-card";
 import ExperienceSection from "@/components/sections/experiences-section";
-import TechnologyBadge from "@/components/tecnology-badge";
-import { Technologies, technologies } from "@/helpers/tecnologies";
+import TechnologyBadge from "@/components/technology-badge";
+import { Technologies, technologies } from "@/helpers/technologies";
 import LanguageSwitcher from "@/components/language-switcher";
 import MobileMenu from "@/components/mobile-menu";
 import ThemeSwitcher from "@/components/theme-switcher";

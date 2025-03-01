@@ -26,5 +26,7 @@
     "years": "{count, plural, =1 {1 ano} other {# anos}}",
     "months": "{count, plural, =1 {1 mês} other {# meses}}",
     "days": "{count, plural, =1 {1 dia} other {# dias}}"
-  }
+  },
+  "fusionclinic_description": "Como único desenvolvedor da plataforma Fusion Clinic — marketplace de aluguel de salas médicas — gerenciei a migração do sistema terceirizado para um modelo interno. Utilizei Next.js, TypeScript e TailwindCSS no front-end, e Laravel no back-end, realizando manutenções críticas e implementando funcionalidades como integração de pagamentos via PIX (via gateway externo). A plataforma atendeu 700 usuários, com ganhos expressivos em performance, segurança e experiência do cliente.",
+  "yoobe_description": "Como desenvolvedor da Yoobe.co — plataforma de logística que conecta colaboradores de grandes empresas a brindes corporativos para recompensas por desempenho ou datas comemorativas — atuei no desenvolvimento e manutenção do e-commerce de resgate, suportando até 10 mil usuários simultâneos. Utilizei Next.js, TypeScript e TailwindCSS para otimizar desempenho e implementar melhorias visuais, além de ferramentas como Docker, Git e GCP para escalabilidade. No back-end, realizei manutenções na estrutura em Ruby on Rails e Spree, integrando-o ao front-end de forma eficiente. A plataforma atendeu grandes parceiros como Pipefy, RD Station e Yampi, garantindo estabilidade em picos de demanda."
 }
