@@ -6,8 +6,6 @@ import {
   Linkedin,
   Github,
   Twitter,
-  Instagram,
-  MessageCircle,
   Share2,
   MessageSquare,
 } from "lucide-react";
@@ -90,7 +88,7 @@ export function ContactSection({ t }: ContactSectionProps) {
           />
         </motion.div>
 
-        <motion.div variants={item}>
+        {/* <motion.div variants={item}>
           <SocialButton
             href="https://instagram.com/maciel.sjr"
             icon={Instagram}
@@ -108,7 +106,7 @@ export function ContactSection({ t }: ContactSectionProps) {
             username="u/Maciel_64"
             gradient="bg-gradient-to-r from-orange-500 to-red-500"
           />
-        </motion.div>
+        </motion.div> */}
 
         <motion.div variants={item}>
           <SocialButton
