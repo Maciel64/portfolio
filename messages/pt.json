@@ -18,5 +18,13 @@
   "Personal Project": "Projeto Pessoal",
   "Academic Project": "Projeto Acadêmico",
   "Maciel Suassuna | Typescript Fullstack Developer": "Maciel Suassuna | Desenvolvedor Fullstack Typescript",
-  "Maciel Gomes Suassuna Júnior Portfolio": "Portfólio de Maciel Gomes Suassuna Júnior"
+  "Maciel Gomes Suassuna Júnior Portfolio": "Portfólio de Maciel Gomes Suassuna Júnior",
+  "Professional Experience": "Experiência Profissional",
+  "FullStack Developer": "Desenvolvedor FullStack",
+  "TI Specialist": "Especialista em TI",
+  "TimeUnits": {
+    "years": "{count, plural, =1 {1 ano} other {# anos}}",
+    "months": "{count, plural, =1 {1 mês} other {# meses}}",
+    "days": "{count, plural, =1 {1 dia} other {# dias}}"
+  }
 }

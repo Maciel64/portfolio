@@ -11,6 +11,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        linkedin: "#0072b1",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

@@ -11,6 +11,7 @@ import TechnologyBadges from "@/components/sections/technologies-badges";
 import { projects } from "@/helpers/projects";
 
 import { ProjectCard } from "@/components/project-card";
+import ExperienceSection from "@/components/sections/experiences-section";
 
 export default function Portfolio() {
   const t = useTranslations();
@@ -43,6 +44,9 @@ export default function Portfolio() {
             </Button>
             <Button variant="ghost" asChild>
               <Link href="#projects">{t("Projects")}</Link>
+            </Button>
+            <Button variant="ghost" asChild>
+              <Link href="#experience">{t("Professional Experience")}</Link>
             </Button>
             <Button variant="ghost" asChild>
               <Link href="#contact">{t("Contact")}</Link>
@@ -109,6 +113,8 @@ export default function Portfolio() {
             ))}
           </div>
         </motion.section>
+
+        <ExperienceSection />
 
         <motion.section
           id="contact"

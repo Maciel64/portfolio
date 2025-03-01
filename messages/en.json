@@ -16,5 +16,13 @@
   "View Project": "View Project",
   "Client Project": "Client Projec",
   "Maciel Suassuna | Typescript Fullstack Developer": "Maciel Suassuna | Typescript Fullstack Developer",
-  "Maciel Gomes Suassuna Júnior Portfolio": "Maciel Gomes Suassuna Júnior Portfolio"
+  "Maciel Gomes Suassuna Júnior Portfolio": "Maciel Gomes Suassuna Júnior Portfolio",
+  "Professional Experience": "Professional Experience",
+  "FullStack Developer": "FullStack Developer",
+  "TI Specialist": "TI Specialist",
+  "TimeUnits": {
+    "years": "{count, plural, =1 {1 year} other {# years}}",
+    "months": "{count, plural, =1 {1 month} other {# months}}",
+    "days": "{count, plural, =1 {1 day} other {# days}}"
+  }
 }

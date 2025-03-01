@@ -2,8 +2,8 @@
   "Full Stack Developer passionate about creating beautiful and functional web applications": "Desarrollador Full Stack apasionado por crear aplicaciones web visualmente atractivas y funcionales",
   "About": "Sobre mí",
   "Skills": "Habilidades",
-  "Projects": "Proyectos",
   "Project": "Proyecto",
+  "Projects": "Proyectos",
   "Contact": "Contacto",
   "Contact Me": "Contáctame",
   "Skills & Technologies": "Habilidades y Tecnologías",
@@ -15,6 +15,16 @@
   "All rights reserved": "Todos los derechos reservados",
   "View Project": "Ver Proyecto",
   "Client Project": "Proyecto Cliente",
+  "Personal Project": "Proyecto Personal",
+  "Academic Project": "Proyecto Académico",
   "Maciel Suassuna | Typescript Fullstack Developer": "Maciel Suassuna | Desarrollador Fullstack de Typescript",
-  "Maciel Gomes Suassuna Júnior Portfolio": "Portafolio de Maciel Gomes Suassuna Júnior"
+  "Maciel Gomes Suassuna Júnior Portfolio": "Portafolio de Maciel Gomes Suassuna Júnior",
+  "Professional Experience": "Experiencia Profesional",
+  "FullStack Developer": "Desarrollador FullStack",
+  "TI Specialist": "Especialista en TI",
+  "TimeUnits": {
+    "years": "{count, plural, =1 {1 año} other {# años}}",
+    "months": "{count, plural, =1 {1 mes} other {# meses}}",
+    "days": "{count, plural, =1 {1 día} other {# días}}"
+  }
 }
