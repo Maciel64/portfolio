@@ -19,6 +19,7 @@ const geistMono = localFont({
 
 import { Analytics } from "@vercel/analytics/react";
 import { Locales } from "@/i18n/request";
+import { ThemeProvider } from "@/provider/theme-provider";
 
 interface IGenerateMetadataProps {
   params: {
@@ -85,9 +86,11 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
+            {children}
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
       <Analytics />
     </html>

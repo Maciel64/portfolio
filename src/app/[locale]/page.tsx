@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Github, Mail, Linkedin } from "lucide-react";
+import { Github, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,6 +13,10 @@ import { ProjectCard } from "@/components/project-card";
 import ExperienceSection from "@/components/sections/experiences-section";
 import TechnologyBadge from "@/components/tecnology-badge";
 import { Technologies, technologies } from "@/helpers/tecnologies";
+import LanguageSwitcher from "@/components/language-switcher";
+import MobileMenu from "@/components/mobile-menu";
+import ThemeSwitcher from "@/components/theme-switcher";
+import { ContactSection } from "@/components/sections/contacts-section";
 
 export default function Portfolio() {
   const t = useTranslations();
@@ -39,7 +43,8 @@ export default function Portfolio() {
           >
             Maciel64
           </motion.span>
-          <div className="flex gap-4">
+
+          <div className="hidden md:flex md:items-center md:gap-4">
             <Button variant="ghost" asChild>
               <Link href="#about">{t("About")}</Link>
             </Button>
@@ -52,7 +57,11 @@ export default function Portfolio() {
             <Button variant="ghost" asChild>
               <Link href="#contact">{t("Contact")}</Link>
             </Button>
+            <LanguageSwitcher />
+            <ThemeSwitcher />
           </div>
+
+          <MobileMenu t={t} />
         </nav>
       </header>
 
@@ -121,40 +130,7 @@ export default function Portfolio() {
 
         <ExperienceSection />
 
-        <motion.section
-          id="contact"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="py-20"
-        >
-          <h2 className="text-3xl font-bold text-center mb-12">
-            {t("Get In Touch")}
-          </h2>
-          <div className="max-w-md mx-auto flex flex-col gap-4">
-            <Button size="lg" asChild>
-              <Link href="mailto:macielsuassuna14@gmail.com">
-                <Mail className="w-4 h-4 mr-2" />
-                {t("Email Me")}
-              </Link>
-            </Button>
-            <Button size="lg" variant="secondary" asChild>
-              <Link
-                href="https://www.linkedin.com/in/maciel-suassuna/"
-                target="_blank"
-              >
-                <Linkedin className="w-4 h-4 mr-2" />
-                {t("Connect on LinkedIn")}
-              </Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link href="https://github.com/Maciel64" target="_blank">
-                <Github className="w-4 h-4 mr-2" />
-                {t("Follow on GitHub")}
-              </Link>
-            </Button>
-          </div>
-        </motion.section>
+        <ContactSection t={t} />
       </main>
 
       <footer className="border-t">

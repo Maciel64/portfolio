@@ -66,7 +66,7 @@ export default function ExperienceSection() {
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger>
-                      <Calendar className="w-4 h-4 mx-2 text-black" />
+                      <Calendar className="w-4 h-4 mx-2" />
                     </TooltipTrigger>
                     <TooltipContent>
                       {timeDistance(exp.init, exp.end ?? new Date())}
@@ -98,17 +98,17 @@ export default function ExperienceSection() {
                 ))}
               </div>
 
-              <div className="flex gap-1">
+              <div className="flex flex-col md:flex-row gap-1">
                 <Link
                   href={exp.site}
-                  about="_blank"
+                  target="_blank"
                   className="bg-muted-foreground p-1 rounded-md text-white"
                 >
                   <Globe className="w-4 h-4" />
                 </Link>
                 <Link
-                  href={exp.site}
-                  about="_blank"
+                  href={exp.linkedin}
+                  target="_blank"
                   className="bg-linkedin p-1 rounded-md text-white"
                 >
                   <Linkedin className="w-4 h-4" />

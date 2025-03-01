@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { technologies, Technologies } from "@/helpers/tecnologies";
+import { useTheme } from "next-themes";
 
 interface TechnologyBadgeProps {
   tech: Technologies;
@@ -17,6 +18,7 @@ export default function TechnologyBadge({
   size = "default",
 }: TechnologyBadgeProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const { theme } = useTheme();
 
   const getTechGradient = (techName: string): string => {
     const gradients = {
@@ -104,8 +106,9 @@ export default function TechnologyBadge({
             "w-full flex items-center justify-start transition-all duration-300 bg-gradient-to-r",
             getTechGradient(tech),
             isHovered
-              ? "bg-[size:100%_100%] text-white"
-              : "bg-[size:0%_100%] bg-no-repeat text-black",
+              ? "bg-[size:100%_100%]"
+              : "bg-[size:0%_100%] bg-no-repeat",
+            theme === "dark" ? "text-white" : "text-black",
             {
               "px-5 py-2 gap-3 text-base": size === "default",
               "px-4 py-1.5 gap-2 text-sm": size === "small",
