@@ -35,6 +35,12 @@
   "Test": "Testes Técnicos",
   "Client": "De Clientes",
   "About The Client": "Sobre o cliente",
+  "Academic Education": "Formação Acadêmica",
+  "Academic Degree": "Formação Superior",
+  "Professional Certification": "Curso Técnico",
+  "Specialized Course": "Especialização",
+  "Bachelor of Computer Science": "Bacharelado em Ciência da Computação",
+  "Technical IT Course": "Curso Técnico em Informática",
   "TimeUnits": {
     "years": "{count, plural, =1 {1 ano} other {# anos}}",
     "months": "{count, plural, =1 {1 mês} other {# meses}}",

@@ -32,6 +32,12 @@
   "Test": "Test",
   "Client": "Client",
   "About The Client": "About The Client",
+  "Academic Education": "Academic Education",
+  "Academic Degree": "Academic Degree",
+  "Professional Certification": "Professional Certification",
+  "Specialized Course": "Specialized Course",
+  "Bachelor of Computer Science": "Bachelor of Computer Science",
+  "Technical IT Course": "Technical IT Course",
   "TimeUnits": {
     "years": "{count, plural, =1 {1 year} other {# years}}",
     "months": "{count, plural, =1 {1 month} other {# months}}",

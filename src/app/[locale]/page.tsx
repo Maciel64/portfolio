@@ -15,6 +15,7 @@ import MobileMenu from "@/components/mobile-menu";
 import ThemeSwitcher from "@/components/theme-switcher";
 import { ContactSection } from "@/components/sections/contacts-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
+import EducationSection from "@/components/sections/education-section";
 
 export default function Portfolio() {
   const t = useTranslations();
@@ -124,7 +125,9 @@ export default function Portfolio() {
 
         <ExperienceSection />
 
-        <ContactSection t={t} />
+        <EducationSection />
+
+        <ContactSection />
       </main>
 
       <footer className="border-t">

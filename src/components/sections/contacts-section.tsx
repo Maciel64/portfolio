@@ -10,12 +10,11 @@ import {
   MessageSquare,
 } from "lucide-react";
 import { SocialButton } from "../social-button";
+import { useTranslations } from "next-intl";
 
-interface ContactSectionProps {
-  t: (key: string) => string;
-}
+export function ContactSection() {
+  const t = useTranslations();
 
-export function ContactSection({ t }: ContactSectionProps) {
   const container = {
     hidden: { opacity: 0 },
     show: {
