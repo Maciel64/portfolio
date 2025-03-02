@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import type { INonClientProject, Project } from "@/helpers/projects";
+import type { INonClientProject, Project } from "@/hooks/use-projects";
 import { ArrowLeft, Github, Globe } from "lucide-react";
 import { ProjectImageGallery } from "@/components/project/project-image-gallery";
 import { useState } from "react";
@@ -101,21 +101,27 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
                 {project.type === "client" ? (
                   <div>
                     <h3 className="text-lg font-semibold mb-3">
-                      {t("About The Client")}
+                      {t("About The Client")}{" "}
                     </h3>
                     {typeof project.clientLogo === "string" && (
-                      <div className="bg-white rounded-lg p-4 flex items-center justify-center">
-                        <Link href={project.clientSite} target="_blank">
-                          <Image
-                            src={project.clientLogo || "/placeholder.svg"}
-                            alt="Client Logo"
-                            className="max-h-12 object-contain grayscale"
-                            width={200}
-                            height={200}
-                            unoptimized={true}
-                          />
-                        </Link>
-                      </div>
+                      <>
+                        <div className="bg-white rounded-lg p-4 flex items-center justify-center">
+                          <Link href={project.clientSite} target="_blank">
+                            <Image
+                              src={project.clientLogo || "/placeholder.svg"}
+                              alt="Client Logo"
+                              className="max-h-12 object-contain grayscale"
+                              width={200}
+                              height={200}
+                              unoptimized={true}
+                            />
+                          </Link>
+                        </div>
+
+                        <p className="mt-4 text-muted-foreground text-xs">
+                          {project.clientDescription}
+                        </p>
+                      </>
                     )}
                   </div>
                 ) : (

@@ -4,14 +4,14 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ProjectCard } from "@/components/project/project-card";
 import { ProjectDetail } from "@/components/project/project-details";
-import { projects } from "@/helpers/projects";
-import type { Project } from "@/helpers/projects";
 import { Filter } from "@/components/project/project-filter";
 import { useTranslations } from "next-intl";
+import { Project, useProjects } from "@/hooks/use-projects";
 
 export function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [filter, setFilter] = useState<string>("all");
+  const { projects } = useProjects();
   const t = useTranslations();
 
   const filteredProjects =

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import type { INonClientProject, Project } from "@/helpers/projects";
+import type { INonClientProject, Project } from "@/hooks/use-projects";
 import { Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
