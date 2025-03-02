@@ -7,9 +7,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-import { projects } from "@/helpers/projects";
-
-import { ProjectCard } from "@/components/project-card";
 import ExperienceSection from "@/components/sections/experiences-section";
 import TechnologyBadge from "@/components/technology-badge";
 import { Technologies, technologies } from "@/helpers/technologies";
@@ -17,6 +14,7 @@ import LanguageSwitcher from "@/components/language-switcher";
 import MobileMenu from "@/components/mobile-menu";
 import ThemeSwitcher from "@/components/theme-switcher";
 import { ContactSection } from "@/components/sections/contacts-section";
+import { ProjectsSection } from "@/components/sections/projects-section";
 
 export default function Portfolio() {
   const t = useTranslations();
@@ -75,8 +73,8 @@ export default function Portfolio() {
             <Image
               src="https://github.com/Maciel64.png"
               alt="Profile Picture"
-              fill
               className="object-cover"
+              fill
             />
           </div>
           <div className="space-y-4">
@@ -112,7 +110,7 @@ export default function Portfolio() {
           className="py-20"
         >
           <h2 className="text-3xl font-bold text-center mb-12">
-            {t("Featured Projects")}
+            {t("Technologies I've Worked With")}
           </h2>
 
           <div className="flex gap-4 flex-wrap my-10">
@@ -121,11 +119,7 @@ export default function Portfolio() {
             ))}
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project) => (
-              <ProjectCard project={project} key={project.title} />
-            ))}
-          </div>
+          <ProjectsSection />
         </motion.section>
 
         <ExperienceSection />

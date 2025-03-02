@@ -22,11 +22,25 @@
   "Professional Experience": "Experiencia Profesional",
   "FullStack Developer": "Desarrollador FullStack",
   "TI Specialist": "Especialista en TI",
+  "Back to projects": "Volver a proyectos",
+  "Technologies": "Tecnologías",
+  "View Source Code": "Ver código fuente",
+  "Live Demo": "Demostración en vivo",
+  "Click to see project details": "Haga clic para ver los detalles del proyecto",
+  "Technologies I've Worked With": "Tecnologías con las que he trabajado",
+  "No description available": "No hay descripción disponible",
+  "All": "Todos",
+  "Personal": "Personales",
+  "Academic": "Académicos",
+  "Test": "Pruebas Técnicas",
+  "Client": "De Clientes",
+  "About The Client": "Sobre el cliente",
   "TimeUnits": {
     "years": "{count, plural, =1 {1 año} other {# años}}",
     "months": "{count, plural, =1 {1 mes} other {# meses}}",
     "days": "{count, plural, =1 {1 día} other {# días}}"
   },
+  "A collection of personal, academic, for clients and technical tests projects I've worked on": "Una colección de proyectos personales, académicos, para clientes y de pruebas técnicas en los que he trabajado.",
   "fusionclinic_description": "Como único desarrollador de Fusion Clinic — un marketplace de alquiler de salas médicas — lideré la migración del sistema tercerizado a una solución interna. Utilicé Next.js, TypeScript y TailwindCSS en el front-end, y Laravel en el back-end, realizando mantenimientos críticos e implementando funcionalidades clave como la integración de pagos PIX (mediante pasarela externa). La plataforma atendió a 700 usuarios, logrando mejoras significativas en rendimiento, seguridad y experiencia del cliente.",
   "yoobe_description": "Como desarrollador en Yoobe.co — plataforma logística que conecta empleados de grandes empresas con obsequios corporativos para recompensas por desempeño o celebraciones — participé en el desarrollo y mantenimiento del e-commerce de canje, soportando hasta 10 mil usuarios simultáneos. Utilicé Next.js, TypeScript y TailwindCSS para optimizar rendimiento e implementar mejoras visuales, junto con herramientas como Docker, Git y GCP para escalabilidad. En el back-end, realicé mantenimiento en la estructura de Ruby on Rails y Spree, integrando el front-end de manera eficiente. La plataforma atendió a socios clave como Pipefy, RD Station y Yampi, garantizando estabilidad en picos de alta demanda."
 }

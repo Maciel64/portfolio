@@ -1,12 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Badge } from "./ui/badge";
-import { Briefcase, Code2, GraduationCap } from "lucide-react";
+import { Badge } from "../ui/badge";
+import { Briefcase, Code2, FlaskConical, GraduationCap } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 interface ProjectBadgeProps {
-  type: "personal" | "client" | "academic";
+  type: "personal" | "client" | "academic" | "test";
 }
 
 export function ProjectBadge({ type }: ProjectBadgeProps) {
@@ -70,6 +70,11 @@ export function ProjectBadge({ type }: ProjectBadgeProps) {
       gradient: "from-amber-500 to-orange-600",
       icon: <GraduationCap className="w-4 h-4" />,
       text: t("Academic Project"),
+    },
+    test: {
+      gradient: "from-rose-600 to-pink-600",
+      icon: <FlaskConical className="w-4 h-4" />,
+      text: t("Test"),
     },
   };
 

@@ -1,15 +1,31 @@
 import { Technologies } from "./technologies";
 
-export interface IProjectSchema {
+export type ProjectTypes = "personal" | "academic" | "test" | "client";
+
+export interface IBaseProject {
   title: string;
   description: string;
   technologies: Technologies[];
   images: string[];
-  type: "personal" | "client" | "academic";
-  link?: string;
+  slug: string;
 }
 
-export const projects: IProjectSchema[] = [
+export interface IClientProject extends IBaseProject {
+  type: "client";
+  clientLogo: string;
+  clientDescription: string;
+  clientSite: string;
+}
+
+export interface INonClientProject extends IBaseProject {
+  type: "personal" | "academic" | "test";
+  github: string;
+  liveUrl?: string;
+}
+
+export type Project = IClientProject | INonClientProject;
+
+export const projects: Project[] = [
   {
     title: "Meetlink",
     description: "",
@@ -23,6 +39,11 @@ export const projects: IProjectSchema[] = [
       "/img/projects/meetlink/006.png",
     ],
     type: "client",
+    slug: "meetlink",
+    clientLogo:
+      "https://seeklogo.com/images/N/natal-shopping-logo-8AFE9A0EB8-seeklogo.com.png",
+    clientDescription: "",
+    clientSite: "https://www.natalshopping.com.br/",
   },
   {
     title: "CisReg UNP",
@@ -37,6 +58,7 @@ export const projects: IProjectSchema[] = [
     ],
     images: ["/img/projects/cisreg_unp/001.png"],
     type: "academic",
-    link: "https://github.com/Samue1Fontes/CisReg_UNP",
+    github: "https://github.com/Samue1Fontes/CisReg_UNP",
+    slug: "cisreg-unp",
   },
 ];

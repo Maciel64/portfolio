@@ -18,6 +18,12 @@ const nextConfig = {
         port: "",
         protocol: "https",
       },
+      {
+        hostname: "seeklogo.com",
+        pathname: "/**",
+        port: "",
+        protocol: "https",
+      },
     ],
   },
 };
