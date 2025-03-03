@@ -50,6 +50,7 @@
   "Data Science": "Ciência de Dados",
   "Languages": "Linguas",
   "Other": "Outros",
+  "Oficial Certified EF SET 66/100 (C1 Effective Proficiency)": "Certificado Oficial EF SET 66/100 (C1 Competencia Efectiva)",
   "TimeUnits": {
     "years": "{count, plural, =1 {1 año} other {# años}}",
     "months": "{count, plural, =1 {1 mes} other {# meses}}",

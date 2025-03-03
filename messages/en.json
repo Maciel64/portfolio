@@ -47,6 +47,7 @@
   "Data Science": "Data Science",
   "Languages": "Languages",
   "Other": "Other",
+  "Oficial Certified EF SET 66/100 (C1 Effective Proficiency)": "Oficial Certified EF SET 66/100 (C1 Effective Proficiency)",
   "TimeUnits": {
     "years": "{count, plural, =1 {1 year} other {# years}}",
     "months": "{count, plural, =1 {1 month} other {# months}}",

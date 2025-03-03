@@ -20,11 +20,11 @@ export function useCertificates() {
   const certificates: Certificate[] = [
     {
       id: "cert-1",
-      title: "Oficial Certified EF SET 66/100 (C1 Effective Proficiency)",
+      title: t("Oficial Certified EF SET 66/100 (C1 Effective Proficiency)"),
       organization: "EF International Language Campuses",
       issueDate: new Date(2025, 1, 1),
       expiryDate: new Date(2035, 11, 1),
-      description: t("efset_certificate"),
+      description: t("efset_certificate_description"),
       credentialLink: "https://cert.efset.org/pt/oZ3ByL",
       logoUrl:
         "https://a.storyblok.com/f/71234/103x24/da9ab91cbd/efset-logo_black.svg",

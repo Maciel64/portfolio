@@ -50,6 +50,7 @@
   "Data Science": "Ciência de Dados",
   "Languages": "Linguas",
   "Other": "Outros",
+  "Oficial Certified EF SET 66/100 (C1 Effective Proficiency)": "Certificado Oficial EF SET 66/100 (C1 Proficiência Eficaz)",
   "TimeUnits": {
     "years": "{count, plural, =1 {1 ano} other {# anos}}",
     "months": "{count, plural, =1 {1 mês} other {# meses}}",
@@ -61,5 +62,5 @@
   "meetlink_description": "Desenvolvido para o Natalshopping, o Meetlink integra um painel administrativo web a totens touch screen, permitindo que clientes solicitem atendimento imediato com um toque. O sistema utiliza tecnologias de comunicação avançadas, como WebRTC, para conectar usuários à equipe de suporte por vídeo em tempo real, com suporte a português e Libras.",
   "natalshopping_description": "Localizado na capital potiguar, o Natalshopping consolida-se como o segundo maior shopping de Natal/RN, sendo referência em inovação e qualidade no Nordeste brasileiro. Com uma arquitetura moderna e infraestrutura de ponta, oferece mais de 200 lojas, praça de alimentação diversificada, cinema multiplex e áreas de lazer integradas. Destaca-se pela experiência completa ao cliente, combinando marcas renomadas, serviços personalizados e eventos culturais que refletem a identidade local. Um ícone do consumo consciente e ponto de encontro estratégico para quem busca conveniência, entretenimento e sofisticação em um único lugar.",
   "cisreg_unp_description": "Projeto acadêmico desenvolvido para a disciplina de Engenharia de Software da UNP, em colaboração com toda a turma. O sistema funciona como uma agenda digital para o Centro Integrado em Saúde (CIS) da universidade, permitindo que administradores aloquem blocos de horários para prefeituras parceiras (como São Gonçalo do Amarante). Cada município adquire créditos em horas (ex.: 20h/mês) que são convertidos em slots agendáveis por seus representantes via plataforma. A solução otimiza o acesso a consultas gratuitas pela população, garantindo controle financeiro (horas contratadas vs utilizadas) e prevenindo sobreposições. Desenvolvido com metodologias ágeis, inclui módulos de autenticação granular, calendário integrado e relatórios de utilização.",
-  "efset_certificate": "Comprova domínio avançado do inglês para contextos acadêmicos e profissionais. Certifica capacidade de compreender textos complexos, comunicar-se com fluência e participar de discussões técnicas. Avaliação padronizada com reconhecimento internacional."
+  "efset_certificate_description": "Comprova domínio avançado do inglês para contextos acadêmicos e profissionais. Certifica capacidade de compreender textos complexos, comunicar-se com fluência e participar de discussões técnicas. Avaliação padronizada com reconhecimento internacional."
 }
