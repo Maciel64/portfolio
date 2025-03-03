@@ -11,6 +11,12 @@ export function useDate() {
       year: "numeric",
     });
 
+  const formatDateRange = (initial: Date, end: Date) =>
+    formatter.dateTimeRange(initial, end, {
+      month: "short",
+      year: "numeric",
+    });
+
   const getDuration = (start: Date, end: Date) => {
     const from = start < end ? start : end;
     const to = start < end ? end : start;
@@ -59,6 +65,7 @@ export function useDate() {
 
   return {
     formatDate,
+    formatDateRange,
     getDuration,
     timeDistance,
   };

@@ -68,6 +68,12 @@ export default function MobileMenu({ t }: MobileMenuProps) {
                   <NavItem href="#experience" onClick={toggleMenu}>
                     {t("Professional Experience")}
                   </NavItem>
+                  <NavItem href="#education" onClick={toggleMenu}>
+                    {t("Academic Education")}
+                  </NavItem>
+                  <NavItem href="#certificates" onClick={toggleMenu}>
+                    {t("Certificates")}
+                  </NavItem>
                   <NavItem href="#contact" onClick={toggleMenu}>
                     {t("Contact")}
                   </NavItem>

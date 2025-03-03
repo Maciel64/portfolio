@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import { useEducation } from "@/hooks/use-education";
 
-export default function EducationSection() {
+export function EducationSection() {
   const t = useTranslations();
   const { educationItems, getIcon, getTypeLabel } = useEducation();
 
