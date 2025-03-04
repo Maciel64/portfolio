@@ -56,6 +56,15 @@ export function useProjects() {
       clientSite: "https://www.natalshopping.com.br/",
     },
     {
+      title: t("Hightom Technical Test"),
+      description: t("hightom_technical_test_description"),
+      technologies: ["NestJS", "TypeScript", "Redis", "PostgreSQL", "Docker"],
+      images: ["/img/projects/hightom_technical_test/001.png"],
+      type: "test",
+      github: "https://github.com/Maciel64/desafio-tech-hightom",
+      slug: "hightom-technical-test",
+    },
+    {
       title: "CisReg UNP",
       description: t("cisreg_unp_description"),
       technologies: [
@@ -70,6 +79,15 @@ export function useProjects() {
       type: "academic",
       github: "https://github.com/Samue1Fontes/CisReg_UNP",
       slug: "cisreg-unp",
+    },
+    {
+      title: t("Fusion Clinic Technical Test"),
+      description: t("fusion_clinic_technical_test_description"),
+      technologies: ["React", "JavaScript", "TailwindCSS"],
+      images: ["/img/projects/fusion_clinic_technical_test/001.png"],
+      type: "test",
+      github: "https://github.com/Maciel64/fusion-clinic-test",
+      slug: "fusion-clinic-technical-test",
     },
   ];
 
