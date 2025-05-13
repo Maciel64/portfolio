@@ -16,7 +16,7 @@ export function useExperiences() {
   const experiences: Experience[] = [
     {
       company: "Higtom.com",
-      role: t("FullStack Developer"),
+      role: t("Technical leader"),
       init: new Date(2025, 0, 28),
       description: "",
       skills: [
